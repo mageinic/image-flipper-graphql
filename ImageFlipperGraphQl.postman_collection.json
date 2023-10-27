@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "1caf4bd6-b6f5-4528-979a-265b8a5087c6",
+		"name": "ImageFlipperGraphQl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "storeConfig",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n  storeConfig {\n   imageflipper_enable\n    product_container\n    product_image\n    flip_image\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/graphql",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n  products(search: \"24-MB02\") {\n    items {\n      id\n      name\n      sku\n      stock_status\n      only_x_left_in_stock\n      meta_keyword\n      meta_description\n      special_price\n      special_from_date\n      special_to_date\n      attribute_set_id\n      manufacturer\n      canonical_url\n      description {\n        html\n      }\n      short_description {\n        html\n      }\n      image {\n        url\n        label\n        position\n        disabled\n      }\n      small_image {\n        url\n        label\n        position\n        disabled\n      }\n      flipper_image {\n        url\n        label\n        position\n        disabled\n      }\n      thumbnail {\n        url\n        label\n        position\n        disabled\n      }\n      new_from_date\n      new_to_date\n      price_tiers {\n        quantity\n        discount {\n          percent_off\n          amount_off\n        }\n        final_price {\n          value\n          currency\n        }\n      }\n    \n      media_gallery {\n        url\n        label\n        position\n        disabled\n        ... on ProductVideo {\n          video_content {\n            media_type\n            video_provider\n            video_url\n            video_title\n            video_description\n            video_metadata\n          }\n        }\n      }\n     \n    }\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/graphql",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
