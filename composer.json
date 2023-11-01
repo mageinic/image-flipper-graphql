@@ -1,9 +1,9 @@
 {
     "name": "mageinic/imageflippergraphql",
-    "description": "Product Image Flipper GraphQl It will Provide Selected Flipper Image Path.",
+    "description": "Image Flipper GraphQL is a part of MageINIC Image Flipper extension that adds GraphQL features. This extension extends Image Flipper definitions.",
     "require": {
         "php": "^8.0",
-        "mageinic/core": ">=1.0.*",
+        "mageinic/core": "1.0.*",
         "magento/module-swatches": "100.4.*",
         "magento/module-graph-ql": "100.4.*",
         "mageinic/imageflipper": "1.0.*",
@@ -12,7 +12,8 @@
     "type": "magento2-module",
     "version": "1.0.0",
     "license": [
-        "Commercial"
+        "OSL-3.0",
+        "AFL-3.0"
     ],
     "authors": [
         {
